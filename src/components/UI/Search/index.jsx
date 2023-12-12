@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import search from '../../../assets/icon/Search.svg';
 import './index.scss';
 
-export const Search = () => {
-
-    const [text, setText] = useState('')
+export const Search = ({ onClick, text, setText, onEnter }) => {
 
     return (
         <div className="search">
@@ -15,8 +13,9 @@ export const Search = () => {
                 placeholder='Search...'
                 value={text}
                 onChange={(e) => setText(e.target.value)}
+                onKeyDown={onEnter}
             />
-            <button className='search__button'>
+            <button className='search__button' onClick={onClick}>
                 <img src={search} alt="Search" />
             </button>
         </div>
