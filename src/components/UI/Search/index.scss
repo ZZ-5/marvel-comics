@@ -1,0 +1,50 @@
+.search {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    &__input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: white;
+        background-color: black;
+        border-radius: 2rem;
+        border: 1px solid black;
+        outline: 1px solid rgb(32, 32, 32);
+    }
+
+    &__button {
+        cursor: pointer;
+        position: absolute;
+        border: none;
+        background-color: black;
+        top: 25%;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 1rem;
+    }
+
+    &-window {
+        position: absolute;
+        top: 5.5rem;
+        background-color: whitesmoke;
+        width: 100%;
+        border-radius: 1rem;
+        overflow: auto;
+        height: auto;
+        max-height: 50rem;
+        z-index: 2;
+    }
+
+    .result {
+        display: flex;
+        padding: 1rem;
+    }
+}

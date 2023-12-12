@@ -1,0 +1,14 @@
+.poster {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 145rem;
+    margin-bottom: 3rem;
+
+    &__img {
+        max-width: 145rem;
+        height: 30rem;
+        object-fit: cover;
+        width: 100%;
+    }
+}

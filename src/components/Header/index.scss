@@ -1,0 +1,101 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 145rem;
+    align-items: center;
+
+    .logo {
+        width: 18rem;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav {
+        font-size: 2rem;
+
+        &:not(:last-child) {
+            margin-right: 4rem;
+        }
+
+        &:hover {
+            background: linear-gradient(90deg, #e933ff, #ffb400, #ff3333, #334dff, #e933ff);
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: nav 1s linear infinite;
+        }
+
+        @keyframes nav {
+            from {
+                background-position: 0% center
+            }
+
+            to {
+                background-position: 200% center
+            }
+        }
+    }
+
+    .nav_active {
+        font-size: 2rem;
+        color: goldenrod;
+
+        &:not(:last-child) {
+
+            margin-right: 4rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        position: relative;
+        max-width: 35rem;
+        width: 100%;
+
+        .user {
+            cursor: pointer;
+            margin-left: 3rem;
+
+            &_active {
+                cursor: pointer;
+                transform: rotate(1080deg);
+                transition: all 1s ease-in-out;
+                margin-left: 3rem;
+            }
+        }
+    }
+
+    .user__window {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        position: absolute;
+        left: 20rem;
+        top: 5rem;
+        background-color: rgba(29, 29, 29, 1);
+        align-items: center;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .user__link {
+        color: whitesmoke;
+        padding: 1rem;
+    }
+
+    .user__link:hover {
+        background: linear-gradient(90deg, goldenrod, gold);
+        background-size: 300% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: nav 1s linear infinite;
+    }
+}
